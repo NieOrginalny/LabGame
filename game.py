@@ -168,7 +168,7 @@ def menu(exits):
 
     # Repeat until the player enter a valid choice
     while True:
-        pass
+        print_menu(exits)
         # COMPLETE THIS PART:
         
         # Display menu
