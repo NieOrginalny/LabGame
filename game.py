@@ -17,7 +17,11 @@ def remove_punct(text):
     >>> remove_punct(",go!So.?uTh")
     'goSouTh'
     """
-    pass # The pass statement does nothing. Replace it with the body of your function.
+    ntext = ""
+    for char in text:
+        if char.isalpha() or char == " ":
+            ntext = ntext + char
+    return ntext
     
     
 def remove_spaces(text):
@@ -36,7 +40,8 @@ def remove_spaces(text):
     >>> remove_spaces("   ")
     ''
     """
-    pass
+    
+    return text.strip()
 
 
 def normalise_input(user_input):
@@ -51,7 +56,8 @@ def normalise_input(user_input):
     >>> normalise_input("HELP!!!!!!!")
     'help'
     """
-    pass
+    text = remove_punct(user_input)
+    return remove_spaces(text).lower()
 
     
 def display_room(room):
@@ -153,7 +159,7 @@ def is_valid_exit(exits, user_input):
     >>> is_valid_exit(rooms["Parking"]["exits"], "east")
     True
     """
-    pass
+    return user_input in exits
 
 
 def menu(exits):
@@ -194,7 +200,7 @@ def move(exits, direction):
     >>> move(rooms["Reception"]["exits"], "west") == rooms["Office"]
     False
     """
-    pass
+    return rooms[exits[direction]]
 
 
 # This is the entry point of our program
