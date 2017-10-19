@@ -168,18 +168,17 @@ def menu(exits):
 
     # Repeat until the player enter a valid choice
     while True:
-        print_menu(exits)
         # COMPLETE THIS PART:
         
         # Display menu
-
+        print_menu(exits)
         # Read player's input
-
+        user_input = input("> ")
         # Normalise the input
 
         # Check if the input makes sense (is valid exit)
             # If so, return the player's choice
-
+        return user_input
 
 
 
