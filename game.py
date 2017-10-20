@@ -56,8 +56,8 @@ def normalise_input(user_input):
     >>> normalise_input("HELP!!!!!!!")
     'help'
     """
-    text = remove_punct(user_input)
-    return remove_spaces(text).lower()
+    text = remove_punct(user_input).lower()
+    return remove_spaces(text)
 
     
 def display_room(room):
@@ -183,7 +183,7 @@ def menu(exits):
         # Normalise the input
         correct_input = normalise_input(user_input)
         # Check if the input makes sense (is valid exit)
-        return user_input
+        return correct_input
 
 
 def move(exits, direction):
